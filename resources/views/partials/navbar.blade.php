@@ -21,7 +21,7 @@
       </form>
       <ul class="navbar-nav mb-2 me-5 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#"><i class="bi bi-box-arrow-in-right"></i> Login</a>
+          <a class="nav-link" aria-current="page" href="/login"><i class="bi bi-box-arrow-in-right"></i> Login</a>
         </li>
       </ul>
       
