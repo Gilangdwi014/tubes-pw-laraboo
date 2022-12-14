@@ -48,12 +48,11 @@
       <div class="card">
         <img src="https://source.unsplash.com/500x400?food" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title text-center">@namaPembuat</h5>
+          <a href="/detmenu" style="text-decoration: none; color: black"><h5 class="card-title text-center">@namaMasakan</h5></a>
           <p class="card-text text-center">Deskripsi (optional/diluar rencana)</p>
         </div>
         <div class="card-body">
           <a href="#" class="card-link text-decoration-none"><i class="bi bi-bookmark-plus"></i> Bookmark</a>
-          <a href="#" style="color: black" class="card-link text-decoration-none float-end"><i class="bi bi-heart" style="color: red"></i> 4321</a>
         </div>
       </div>
     </div>
@@ -61,12 +60,11 @@
       <div class="card">
         <img src="https://source.unsplash.com/500x400?food" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title text-center">@namaPembuat</h5>
+          <a href="/detmenu" style="text-decoration: none; color: black"><h5 class="card-title text-center">@namaMasakan</h5></a>
           <p class="card-text text-center">Deskripsi (optional/diluar rencana)</p>
         </div>
         <div class="card-body">
           <a href="#" class="card-link text-decoration-none"><i class="bi bi-bookmark-plus"></i> Bookmark</a>
-          <a href="#" style="color: black" class="card-link text-decoration-none float-end"><i class="bi bi-heart" style="color: red"></i> 4321</a>
         </div>
       </div>
     </div>
@@ -74,12 +72,11 @@
       <div class="card">
         <img src="https://source.unsplash.com/500x400?food" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title text-center">@namaPembuat</h5>
+          <a href="/detmenu" style="text-decoration: none; color: black"><h5 class="card-title text-center">@namaMasakan</h5></a>
           <p class="card-text text-center">Deskripsi (optional/diluar rencana)</p>
         </div>
         <div class="card-body clearfix">
           <a href="#" class="card-link text-decoration-none"><i class="bi bi-bookmark-plus"></i> Bookmark</a>
-          <a href="#" style="color: black" class="card-link text-decoration-none float-end"><i class="bi bi-heart" style="color: red"></i> 4321</a>
         </div>
       </div>
     </div>
@@ -88,12 +85,11 @@
       <div class="card">
         <img src="https://source.unsplash.com/500x400?beverage" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title text-center">@namaPembuat</h5>
+          <a href="/detmenu" style="text-decoration: none; color: black"><h5 class="card-title text-center">@namaMasakan</h5></a>
           <p class="card-text text-center">Deskripsi (optional/diluar rencana)</p>
         </div>
         <div class="card-body">
           <a href="#" class="card-link text-decoration-none"><i class="bi bi-bookmark-plus"></i> Bookmark</a>
-          <a href="#" style="color: black" class="card-link text-decoration-none float-end"><i class="bi bi-heart" style="color: red"></i> 4321</a>
         </div>
       </div>
     </div>
@@ -101,12 +97,11 @@
       <div class="card">
         <img src="https://source.unsplash.com/500x400?beverage" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title text-center">@namaPembuat</h5>
+          <a href="/detmenu" style="text-decoration: none; color: black"><h5 class="card-title text-center">@namaMasakan</h5></a>
           <p class="card-text text-center">Deskripsi (optional/diluar rencana)</p>
         </div>
         <div class="card-body">
           <a href="#" class="card-link text-decoration-none"><i class="bi bi-bookmark-plus"></i> Bookmark</a>
-          <a href="#" style="color: black" class="card-link text-decoration-none float-end"><i class="bi bi-heart" style="color: red"></i> 4321</a>
         </div>
       </div>
     </div>
@@ -114,12 +109,11 @@
       <div class="card">
         <img src="https://source.unsplash.com/500x400?beverage" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title text-center">@namaPembuat</h5>
+          <a href="/detmenu" style="text-decoration: none; color: black"><h5 class="card-title text-center">@namaMasakan</h5></a>
           <p class="card-text text-center">Deskripsi (optional/diluar rencana)</p>
         </div>
         <div class="card-body clearfix">
           <a href="#" class="card-link text-decoration-none"><i class="bi bi-bookmark-plus"></i> Bookmark</a>
-          <a href="#" style="color: black" class="card-link text-decoration-none float-end"><i class="bi bi-heart" style="color: red"></i> 4321</a>
         </div>
       </div>
     </div>
@@ -128,12 +122,11 @@
       <div class="card">
         <img src="https://source.unsplash.com/500x400?dessert" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title text-center">@namaPembuat</h5>
+          <a href="/detmenu" style="text-decoration: none; color: black"><h5 class="card-title text-center">@namaMasakan</h5></a>
           <p class="card-text text-center">Deskripsi (optional/diluar rencana)</p>
         </div>
         <div class="card-body">
           <a href="#" class="card-link text-decoration-none"><i class="bi bi-bookmark-plus"></i> Bookmark</a>
-          <a href="#" style="color: black" class="card-link text-decoration-none float-end"><i class="bi bi-heart" style="color: red"></i> 4321</a>
         </div>
       </div>
     </div>
@@ -141,12 +134,11 @@
       <div class="card">
         <img src="https://source.unsplash.com/500x400?dessert" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title text-center">@namaPembuat</h5>
+          <a href="/detmenu" style="text-decoration: none; color: black"><h5 class="card-title text-center">@namaMasakan</h5></a>
           <p class="card-text text-center">Deskripsi (optional/diluar rencana)</p>
         </div>
         <div class="card-body">
           <a href="#" class="card-link text-decoration-none"><i class="bi bi-bookmark-plus"></i> Bookmark</a>
-          <a href="#" style="color: black" class="card-link text-decoration-none float-end"><i class="bi bi-heart" style="color: red"></i> 4321</a>
         </div>
       </div>
     </div>
@@ -154,12 +146,11 @@
       <div class="card">
         <img src="https://source.unsplash.com/500x400?dessert" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title text-center">@namaPembuat</h5>
+          <a href="/detmenu" style="text-decoration: none; color: black"><h5 class="card-title text-center">@namaMasakan</h5></a>
           <p class="card-text text-center">Deskripsi (optional/diluar rencana)</p>
         </div>
         <div class="card-body clearfix">
           <a href="#" class="card-link text-decoration-none"><i class="bi bi-bookmark-plus"></i> Bookmark</a>
-          <a href="#" style="color: black" class="card-link text-decoration-none float-end"><i class="bi bi-heart" style="color: red"></i> 4321</a>
         </div>
       </div>
     </div>

@@ -14,7 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('menu');
+    return view('menu', [
+        "active" => 'home'
+    ]);
 });
 
 Route::get('/login', function () {
@@ -33,10 +35,19 @@ Route::get('/dashboard/posts', function () {
 });
 
 Route::get('/detmenu', function () {
-    return view('detmenu');
+    return view('detmenu', [
+        "active" => 'home'
+    ]);
 });
 
 Route::get('/categories', function () {
-    return view('categories');
+    return view('categories', [
+        "active" => 'categories'
+    ]);
+});
 
+Route::get('/pengguna', function () {
+    return view('pengguna', [
+        "active" => 'home'
+    ]);
 });
