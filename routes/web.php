@@ -34,6 +34,7 @@ Route::get('/dashboard/posts', function () {
 
 Route::get('/detmenu', function () {
     return view('detmenu');
+});
 
 Route::get('/categories', function () {
     return view('categories');
