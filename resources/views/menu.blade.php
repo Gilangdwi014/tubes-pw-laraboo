@@ -1,160 +1,112 @@
 @extends('layouts.main')
 @section('container')
+    <div class="row justify-content-center mb-3">
 
-<div class="row justify-content-center mb-3">
-  <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="1000">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="https://source.unsplash.com/1000x400?food" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>First slide label</h5>
-          <p>Some representative placeholder content for the first slide.</p>
+        <div class="col-md-6">
+            <form action="/posts">
+                @if (request('category'))
+                    <input type="hidden" name="category" value="{{ request('category') }}">
+                @endif
+                @if (request('user'))
+                    <input type="hidden" name="user" value="{{ request('user') }}">
+                @endif
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Search.." name="search"
+                        value="{{ request('search') }}">
+                    <button class="btn" style="background: #ffc4b6" type="submit">Search</button>
+                </div>
+            </form>
         </div>
-      </div>
-      <div class="carousel-item">
-        <img src="https://source.unsplash.com/1000x400?dessert" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Second slide label</h5>
-          <p>Some representative placeholder content for the second slide.</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="https://source.unsplash.com/1000x400?beverage" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Third slide label</h5>
-          <p>Some representative placeholder content for the third slide.</p>
-        </div>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-</div>
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-4 mb-3">
-      <div class="card">
-        <img src="https://source.unsplash.com/500x400?food" class="card-img-top" alt="...">
-        <div class="card-body">
-          <a href="/detmenu" style="text-decoration: none; color: black"><h5 class="card-title text-center">@namaMasakan</h5></a>
-          <p class="card-text text-center">Deskripsi (optional/diluar rencana)</p>
+        <div class="card mb-3 px-0">
+            <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel"
+                data-bs-interval="1000">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://source.unsplash.com/1000x400?food" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>First slide label</h5>
+                            <p>Some representative placeholder content for the first slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://source.unsplash.com/1000x400?dessert" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://source.unsplash.com/1000x400?beverage" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Third slide label</h5>
+                            <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
         </div>
-        <div class="card-body">
-          <a href="#" class="card-link text-decoration-none"><i class="bi bi-bookmark-plus"></i> Bookmark</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 mb-3">
-      <div class="card">
-        <img src="https://source.unsplash.com/500x400?food" class="card-img-top" alt="...">
-        <div class="card-body">
-          <a href="/detmenu" style="text-decoration: none; color: black"><h5 class="card-title text-center">@namaMasakan</h5></a>
-          <p class="card-text text-center">Deskripsi (optional/diluar rencana)</p>
-        </div>
-        <div class="card-body">
-          <a href="#" class="card-link text-decoration-none"><i class="bi bi-bookmark-plus"></i> Bookmark</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 mb-3">
-      <div class="card">
-        <img src="https://source.unsplash.com/500x400?food" class="card-img-top" alt="...">
-        <div class="card-body">
-          <a href="/detmenu" style="text-decoration: none; color: black"><h5 class="card-title text-center">@namaMasakan</h5></a>
-          <p class="card-text text-center">Deskripsi (optional/diluar rencana)</p>
-        </div>
-        <div class="card-body clearfix">
-          <a href="#" class="card-link text-decoration-none"><i class="bi bi-bookmark-plus"></i> Bookmark</a>
-        </div>
-      </div>
-    </div>
 
-    <div class="col-md-4 mb-3">
-      <div class="card">
-        <img src="https://source.unsplash.com/500x400?beverage" class="card-img-top" alt="...">
-        <div class="card-body">
-          <a href="/detmenu" style="text-decoration: none; color: black"><h5 class="card-title text-center">@namaMasakan</h5></a>
-          <p class="card-text text-center">Deskripsi (optional/diluar rencana)</p>
-        </div>
-        <div class="card-body">
-          <a href="#" class="card-link text-decoration-none"><i class="bi bi-bookmark-plus"></i> Bookmark</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 mb-3">
-      <div class="card">
-        <img src="https://source.unsplash.com/500x400?beverage" class="card-img-top" alt="...">
-        <div class="card-body">
-          <a href="/detmenu" style="text-decoration: none; color: black"><h5 class="card-title text-center">@namaMasakan</h5></a>
-          <p class="card-text text-center">Deskripsi (optional/diluar rencana)</p>
-        </div>
-        <div class="card-body">
-          <a href="#" class="card-link text-decoration-none"><i class="bi bi-bookmark-plus"></i> Bookmark</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 mb-3">
-      <div class="card">
-        <img src="https://source.unsplash.com/500x400?beverage" class="card-img-top" alt="...">
-        <div class="card-body">
-          <a href="/detmenu" style="text-decoration: none; color: black"><h5 class="card-title text-center">@namaMasakan</h5></a>
-          <p class="card-text text-center">Deskripsi (optional/diluar rencana)</p>
-        </div>
-        <div class="card-body clearfix">
-          <a href="#" class="card-link text-decoration-none"><i class="bi bi-bookmark-plus"></i> Bookmark</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4 mb-3">
-      <div class="card">
-        <img src="https://source.unsplash.com/500x400?dessert" class="card-img-top" alt="...">
-        <div class="card-body">
-          <a href="/detmenu" style="text-decoration: none; color: black"><h5 class="card-title text-center">@namaMasakan</h5></a>
-          <p class="card-text text-center">Deskripsi (optional/diluar rencana)</p>
-        </div>
-        <div class="card-body">
-          <a href="#" class="card-link text-decoration-none"><i class="bi bi-bookmark-plus"></i> Bookmark</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 mb-3">
-      <div class="card">
-        <img src="https://source.unsplash.com/500x400?dessert" class="card-img-top" alt="...">
-        <div class="card-body">
-          <a href="/detmenu" style="text-decoration: none; color: black"><h5 class="card-title text-center">@namaMasakan</h5></a>
-          <p class="card-text text-center">Deskripsi (optional/diluar rencana)</p>
-        </div>
-        <div class="card-body">
-          <a href="#" class="card-link text-decoration-none"><i class="bi bi-bookmark-plus"></i> Bookmark</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 mb-3">
-      <div class="card">
-        <img src="https://source.unsplash.com/500x400?dessert" class="card-img-top" alt="...">
-        <div class="card-body">
-          <a href="/detmenu" style="text-decoration: none; color: black"><h5 class="card-title text-center">@namaMasakan</h5></a>
-          <p class="card-text text-center">Deskripsi (optional/diluar rencana)</p>
-        </div>
-        <div class="card-body clearfix">
-          <a href="#" class="card-link text-decoration-none"><i class="bi bi-bookmark-plus"></i> Bookmark</a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</div>
-@endsection
+        @if ($posts->count())
+            <div class="container">
+                <div class="row">
+                    @foreach ($posts as $post)
+                        <div class="col-md-4 mb-3">
+                            <div class="card">
+                                <div class="position-absolute px-3 py-2" style="background-color: rgba(0, 0, 0, 0.7)">
+                                    <a href="/menu?category={{ $post->category->slug }}"
+                                        class="text-white text-decoration-none">
+                                        {{ $post->category->name }}
+                                    </a>
+                                </div>
+                                @if ($post->image)
+                                    <img src="{{ asset('storage/' . $post->image) }}" alt="{{ $post->category->name }}"
+                                        class="img-fluid">
+                                @else
+                                    <img src="https://source.unsplash.com/500x400?{{ $post->category->name }}"
+                                        class="card-img-top" alt="{{ $post->category->name }}">
+                                @endif
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ $post->nama_masakan }}</h5>
+                                    <p>
+                                        <small class="text-muted">
+                                            By.
+                                            <a href="/menu?user={{ $post->user->username }}" class="text-decoration-none">
+                                                {{ $post->user->name }}
+                                            </a>
+                                            {{ $post->created_at->diffForHumans() }}
+                                        </small>
+                                    </p>
+                                    <a href="/menu/{{ $post->slug }}" class="btn btn-primary">Read more</a>
+                                    <a href="#" class="card-link text-decoration-none">
+                                        <i class="bi bi-bookmark-plus"></i>
+                                        Bookmark
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        @else
+            <p class="text-center fs-4">No post found.</p>
+        @endif
+    @endsection
