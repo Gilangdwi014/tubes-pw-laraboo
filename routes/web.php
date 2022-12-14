@@ -32,6 +32,10 @@ Route::get('/dashboard/posts', function () {
     return view('dashboard.posts.create');
 });
 
+Route::get('/detmenu', function () {
+    return view('detmenu');
+
 Route::get('/categories', function () {
     return view('categories');
+
 });
