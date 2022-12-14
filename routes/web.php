@@ -23,3 +23,11 @@ Route::get('/login', function () {
 Route::get('/register', function () {
     return view('register.index');
 });
+
+Route::get('/dashboard', function () {
+    return view('dashboard.index');
+});
+
+Route::get('/dashboard/posts', function () {
+    return view('dashboard.posts.create');
+});
