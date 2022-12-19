@@ -17,11 +17,11 @@ return new class extends Migration
             $table->id();
             $table->foreignId('category_id');
             $table->foreignId('user_id');
-            $table->string('title');
+            $table->string('nama_masakan');
             $table->string('slug')->unique();
             $table->string('image')->nullable();
-            $table->text('excerpt');
-            $table->text('body');
+            $table->text('bahan_makanan');
+            $table->text('cara_pembuatan');
             $table->timestamp('published_at')->nullable();
             $table->timestamps();
         });
