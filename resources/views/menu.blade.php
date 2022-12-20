@@ -3,7 +3,7 @@
     <div class="row justify-content-center mb-3">
 
         <div class="col-md-6">
-            <form action="/posts">
+            <form action="/">
                 @if (request('category'))
                     <input type="hidden" name="category" value="{{ request('category') }}">
                 @endif
@@ -72,7 +72,7 @@
                         <div class="col-md-4 mb-3">
                             <div class="card">
                                 <div class="position-absolute px-3 py-2" style="background-color: rgba(0, 0, 0, 0.7)">
-                                    <a href="/menu?category={{ $post->category->slug }}"
+                                    <a href="/?category={{ $post->category->slug }}"
                                         class="text-white text-decoration-none">
                                         {{ $post->category->name }}
                                     </a>
@@ -89,7 +89,7 @@
                                     <p>
                                         <small class="text-muted">
                                             By.
-                                            <a href="/menu?user={{ $post->user->username }}" class="text-decoration-none">
+                                            <a href="/?user={{ $post->user->username }}" class="text-decoration-none">
                                                 {{ $post->user->name }}
                                             </a>
                                             {{ $post->created_at->diffForHumans() }}
@@ -109,4 +109,9 @@
         @else
             <p class="text-center fs-4">No post found.</p>
         @endif
+
+        <div class="d-flex justify-content-end">
+            {{ $posts->links() }}
+        </div>
+
     @endsection
