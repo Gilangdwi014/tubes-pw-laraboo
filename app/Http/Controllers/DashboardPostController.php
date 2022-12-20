@@ -19,7 +19,8 @@ class DashboardPostController extends Controller
     public function index()
     {
         return view('dashboard.index', [
-            'posts' => Post::where('user_id', auth()->user()->id)->get()
+            'posts' => Post::latest()->where('user_id', auth()->user()->id)->paginate(6)->withQueryString(),
+            "active" => "home"
         ]);
     }
 
@@ -137,6 +138,7 @@ class DashboardPostController extends Controller
      */
     public function destroy(Post $post)
     {
+        dd($post->id);
         if ($post->image) {
             Storage::delete($post->image);
         }

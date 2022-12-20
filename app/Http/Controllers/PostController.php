@@ -14,18 +14,18 @@ class PostController extends Controller
         $title = "";
         if (request('category')) {
             $category = Category::firstWhere('slug', request('category'));
-            $title = ' in ' . $category->name;
+            // $title = ' in ' . $category->name;
         }
 
         if (request('user')) {
             $user = User::firstWhere('username', request('user'));
-            $title = ' by ' . $user->name;
+            // $title = ' by ' . $user->name;
         }
 
         return view('menu', [
-            "title" => "All Posts" . $title,
+            "title" => "All Posts",
             "active" => "home",
-            "posts" => Post::latest()->paginate(7)->withQueryString()
+            "posts" => Post::latest()->filter(request(['search', 'category', 'user']))->paginate(6)->withQueryString()
         ]);
     }
 
