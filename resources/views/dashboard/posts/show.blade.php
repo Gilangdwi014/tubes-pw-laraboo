@@ -1,4 +1,4 @@
-@extends('dashboard.layouts.main')
+@extends('layouts.main')
 @section('container')
     <div class="row my-3">
         <div class="col-lg-8">

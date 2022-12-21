@@ -1,7 +1,6 @@
 <nav class="navbar navbar-expand-lg" style="background: #F4DCD6">
     <div class="container">
-        <a class="navbar-brand" href="/"><img src="img/logo2.png" width="56" height="45"
-                alt=""><strong>CookingMaster</strong></a>
+        <a class="navbar-brand" href="/"><b>CookingMaster</b></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -29,7 +28,7 @@
                         <ul class="dropdown-menu">
                             <li>
                                 <a class="dropdown-item" href="/dashboard">
-                                    <i class="bi bi-layout-text-sidebar-reverse"></i> My Dashboard
+                                    <i class="bi bi-layout-text-sidebar-reverse"></i> Beranda
                                 </a>
                             </li>
                             <li>
