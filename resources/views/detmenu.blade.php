@@ -14,14 +14,17 @@
     </p>
     <div class="row">
         <div class="col-lg-6">
-            @if ($post->image)
+            <div>
+                <img src="https://source.unsplash.com/500x400?food" style="max-height: 500px; border-radius: 5px" class="img-fluid">
+            </div>
+            {{-- @if ($post->image)
                 <div style="max-height: 350px; overflow: hidden">
                     <img src="{{ asset('storage/' . $post->image) }}" alt="{{ $post->category->name }}" class="img-fluid">
                 </div>
             @else
                 <img src="https://source.unsplash.com/500x400?{{ $post->category->name }}" alt="{{ $post->category->name }}"
                     class="img-fluid">
-            @endif
+            @endif --}}
         </div>
         <div class="col-lg-6">
             <ul class="nav nav-tabs" id="myTab" role="tablist">
