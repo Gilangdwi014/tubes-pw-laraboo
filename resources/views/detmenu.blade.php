@@ -61,7 +61,7 @@
     </div>
     <br><br><br><br><br><br>
         <div class="col-lg-8">
-            <h5>Kolom Komentar</h5>
+            <h5>Kolom Feedback</h5>
             {{-- table komentar di database --}}
             <form action="" method="post">
                 <input type="hidden" name="idpostingan"> {{-- tabel postingan --}}
