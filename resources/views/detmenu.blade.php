@@ -58,8 +58,10 @@
                 </div>
             </div>
         </div>
-        <br><br><br><br><br>
+    </div>
+    <br><br><br><br><br><br>
         <div class="col-lg-8">
+            <h5>Kolom Feedback</h5>
             {{-- table komentar di database --}}
             <form action="" method="post">
                 <input type="hidden" name="idpostingan"> {{-- tabel postingan --}}
@@ -89,5 +91,4 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, perferendis modi. Sapiente atque, aut molestiae ea eaque nemo voluptate facilis! Alias labore doloribus autem sunt sit modi eligendi voluptatum facilis.</p>
             </div>
         </div>
-    </div>
 @endsection
