@@ -57,8 +57,9 @@
                                     <a href="/dashboard/posts/{{ $post->slug }}" class="btn btn-success"><i
                                             class="bi bi-newspaper">
                                             Detail</i></a>
-                                    <a href="#" class="btn btn-warning"><i class="bi bi-pencil"> Edit</i></a>
-                                    <form action="/dashboard/{{ $post->slug }}" method="POST" class="d-inline">
+                                    <a href="/dashboard/posts/{{ $post->slug }}/edit" class="btn btn-warning"><i
+                                            class="bi bi-pencil"> Edit</i></a>
+                                    <form action="/dashboard/posts/{{ $post->slug }}" method="POST" class="d-inline">
                                         @csrf
                                         @method('delete')
                                         <button class="btn btn-danger" onclick="return confirm('Are you sure?')">

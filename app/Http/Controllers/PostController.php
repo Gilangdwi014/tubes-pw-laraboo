@@ -6,6 +6,7 @@ use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Models\User;
+use App\Models\Like;
 
 class PostController extends Controller
 {
@@ -25,7 +26,8 @@ class PostController extends Controller
         return view('menu', [
             "title" => "All Posts",
             "active" => "home",
-            "posts" => Post::latest()->filter(request(['search', 'category', 'user']))->paginate(6)->withQueryString()
+            "posts" => Post::latest()->filter(request(['search', 'category', 'user']))->paginate(6)->withQueryString(),
+            "likes" => Like::all(),
         ]);
     }
 

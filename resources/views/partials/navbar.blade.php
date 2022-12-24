@@ -27,8 +27,16 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a class="dropdown-item" href="/dashboard">
+                                <a class="dropdown-item" href="/dashboard/posts">
                                     <i class="bi bi-layout-text-sidebar-reverse"></i> Beranda
+                                </a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/bookmark">
+                                    <i class="bi bi-layout-text-sidebar-reverse"></i> Bookmark
                                 </a>
                             </li>
                             <li>

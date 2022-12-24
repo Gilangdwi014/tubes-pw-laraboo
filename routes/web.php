@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BookmarkController;
 use App\Http\Controllers\DashboardPostController;
 use App\Http\Controllers\PostController;
 use App\Models\Category;
@@ -29,6 +30,10 @@ Route::get('/categories', function () {
     ]);
 });
 
+Route::get('/bookmark', [BookmarkController::class, 'index'])->middleware('auth');
+Route::post('/bookmark/{post:slug}', [BookmarkController::class, 'liker'])->middleware('auth');
+Route::post('/bookmark/{post:slug}/hapus', [BookmarkController::class, 'disliker'])->middleware('auth');
+
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout']);
@@ -38,6 +43,3 @@ Route::post('/register', [RegisterController::class, 'store']);
 
 Route::get('/dashboard/posts/checkSlug', [DashboardPostController::class, 'checkSlug'])->middleware('auth');
 Route::resource('/dashboard/posts', DashboardPostController::class)->middleware('auth');
-
-Route::get('/dashboard/checkSlug', [DashboardPostController::class, 'checkSlug'])->middleware('auth');
-Route::resource('/dashboard', DashboardPostController::class)->middleware('auth');

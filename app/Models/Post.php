@@ -43,7 +43,7 @@ class Post extends Model
 
     public function votedUsers()
     {
-        return $this->belongsToMany(User::class, 'likes')->withPivot('is_dislike')->withTimestamps();
+        return $this->belongsToMany(User::class, 'likes')->withTimestamps();
     }
 
     public function getRouteKeyName()
