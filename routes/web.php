@@ -20,7 +20,7 @@ use App\Http\Controllers\RegisterController;
 */
 
 Route::get('/', [PostController::class, 'index']);
-Route::get('/menu/{post:slug}', [PostController::class, 'show']);
+Route::get('/menu/{post:slug}', [PostController::class, 'show'])->middleware('auth');
 
 Route::get('/categories', function () {
     return view('categories', [
@@ -41,5 +41,5 @@ Route::post('/logout', [LoginController::class, 'logout']);
 Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store']);
 
-Route::get('/dashboard/posts/checkSlug', [DashboardPostController::class, 'checkSlug'])->middleware('auth');
-Route::resource('/dashboard/posts', DashboardPostController::class)->middleware('auth');
+Route::get('/dashboard/posts/checkSlug', [DashboardPostController::class, 'checkSlug'])->middleware('admin');
+Route::resource('/dashboard/posts', DashboardPostController::class)->middleware('admin');

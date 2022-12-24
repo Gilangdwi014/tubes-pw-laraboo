@@ -120,8 +120,8 @@
                                                         Bookmark
                                                     </button>
                                                 </form>
-                                            @endif
-                                        @break
+                                            @break
+                                        @endif
                                     @endforeach
                                 </div>
                             </div>
