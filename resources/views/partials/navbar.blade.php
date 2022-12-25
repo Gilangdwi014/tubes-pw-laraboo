@@ -26,9 +26,19 @@
                             Welcome back, {{ auth()->user()->name }}
                         </a>
                         <ul class="dropdown-menu">
+                            @can('admin')
+                                <li>
+                                    <a class="dropdown-item" href="/dashboard/posts">
+                                        <i class="bi bi-layout-text-sidebar-reverse"></i> Beranda
+                                    </a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                            @endcan
                             <li>
-                                <a class="dropdown-item" href="/dashboard">
-                                    <i class="bi bi-layout-text-sidebar-reverse"></i> Beranda
+                                <a class="dropdown-item" href="/bookmark">
+                                    <i class="bi bi-layout-text-sidebar-reverse"></i> Bookmark
                                 </a>
                             </li>
                             <li>

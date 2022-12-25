@@ -14,17 +14,14 @@
     </p>
     <div class="row">
         <div class="col-lg-6">
-            <div>
-                <img src="https://source.unsplash.com/500x400?food" style="max-height: 500px; border-radius: 5px" class="img-fluid">
-            </div>
-            {{-- @if ($post->image)
+            @if ($post->image)
                 <div style="max-height: 350px; overflow: hidden">
                     <img src="{{ asset('storage/' . $post->image) }}" alt="{{ $post->category->name }}" class="img-fluid">
                 </div>
             @else
                 <img src="https://source.unsplash.com/500x400?{{ $post->category->name }}" alt="{{ $post->category->name }}"
                     class="img-fluid">
-            @endif --}}
+            @endif
         </div>
         <div class="col-lg-6">
             <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -60,35 +57,39 @@
         </div>
     </div>
     <br><br><br><br><br><br>
-        <div class="col-lg-8">
-            <h5>Kolom Feedback</h5>
-            {{-- table komentar di database --}}
-            <form action="" method="post">
-                <input type="hidden" name="idpostingan"> {{-- tabel postingan --}}
-                <input type="hidden" name="namauser"> {{-- table user/table posingan ->userid->Getnama --}}
-                <input id="isiKomentar" type="hidden" name="isiKomentar"> {{-- murni dari table komentar --}}
-                <trix-editor></trix-editor>
-                <br>
-                <div style="padding-left: 89%">
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-            </form>
+    <div class="col-lg-8">
+        <h5>Kolom Feedback</h5>
+        {{-- table komentar di database --}}
+        <form action="" method="post">
+            <input type="hidden" name="idpostingan"> {{-- tabel postingan --}}
+            <input type="hidden" name="namauser"> {{-- table user/table posingan ->userid->Getnama --}}
+            <input id="isiKomentar" type="hidden" name="isiKomentar"> {{-- murni dari table komentar --}}
+            <trix-editor></trix-editor>
             <br>
-            <div class="col-lg-8">
-                <h5>Gilang</h5>
-                <small class="text-muted">30 minutes ago</small>
-                <br>
-                <p>Test Komentar di postingan Ini</p>
-
-                <h5>Dean T</h5>
-                <small class="text-muted">30 minutes ago</small>
-                <br>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, perferendis modi. Sapiente atque, aut molestiae ea eaque nemo voluptate facilis! Alias labore doloribus autem sunt sit modi eligendi voluptatum facilis.</p>
-
-                <h5>Sulis</h5>
-                <small class="text-muted">30 minutes ago</small>
-                <br>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, perferendis modi. Sapiente atque, aut molestiae ea eaque nemo voluptate facilis! Alias labore doloribus autem sunt sit modi eligendi voluptatum facilis.</p>
+            <div style="padding-left: 89%">
+                <button type="submit" class="btn btn-primary">Submit</button>
             </div>
+        </form>
+        <br>
+        <div class="col-lg-8">
+            <h5>Gilang</h5>
+            <small class="text-muted">30 minutes ago</small>
+            <br>
+            <p>Test Komentar di postingan Ini</p>
+
+            <h5>Dean T</h5>
+            <small class="text-muted">30 minutes ago</small>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, perferendis modi. Sapiente atque, aut
+                molestiae ea eaque nemo voluptate facilis! Alias labore doloribus autem sunt sit modi eligendi voluptatum
+                facilis.</p>
+
+            <h5>Sulis</h5>
+            <small class="text-muted">30 minutes ago</small>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, perferendis modi. Sapiente atque, aut
+                molestiae ea eaque nemo voluptate facilis! Alias labore doloribus autem sunt sit modi eligendi voluptatum
+                facilis.</p>
         </div>
+    </div>
 @endsection

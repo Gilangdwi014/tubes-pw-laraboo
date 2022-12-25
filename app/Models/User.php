@@ -52,6 +52,6 @@ class User extends Authenticatable
 
     public function votedPosts()
     {
-        return $this->belongsToMany(Post::class, 'likes')->withPivot('is_dislike')->withTimestamps();
+        return $this->belongsToMany(Post::class, 'likes')->withTimestamps();
     }
 }

@@ -1,3 +1,5 @@
+<?php use Illuminate\Support\Facades\Blade; ?>
+
 @extends('layouts.main')
 @section('container')
     <div class="row justify-content-center mb-3">
@@ -95,23 +97,45 @@
                                             {{ $post->created_at->diffForHumans() }}
                                         </small>
                                     </p>
-                                    <a href="/menu/{{ $post->slug }}" class="btn btn-primary">Read more</a>
-                                    <a href="#" class="card-link text-decoration-none">
-                                        <i class="bi bi-bookmark-plus"></i>
-                                        Bookmark
-                                    </a>
+                                    <div class="d-flex justify-content-between">
+                                        <a href="/menu/{{ $post->slug }}" class="btn btn-primary">Read more</a>
+                                        @foreach ($likes as $like)
+                                            @if ($post->id === $like->post_id && $like->user_id === Auth::id())
+                                                <div class="bookmarked">
+                                                    <span
+                                                        class="card-link text-decoration-none border-0 bg-white text-primary">
+                                                        <i class="bi bi-bookmark-plus"></i>
+                                                        Bookmarked
+                                                    </span>
+                                                </div>
+                                            @endif
+                                        @endforeach
+                                        @foreach ($likes as $like)
+                                            @if ($like->post_id !== $post->id)
+                                                <form action="/bookmark/{{ $post->slug }}" method="POST">
+                                                    @csrf
+                                                    <button
+                                                        class="card-link text-decoration-none border-0 bg-white text-primary">
+                                                        <i class="bi bi-bookmark-plus"></i>
+                                                        Bookmark
+                                                    </button>
+                                                </form>
+                                            @break
+                                        @endif
+                                    @endforeach
                                 </div>
                             </div>
                         </div>
-                    @endforeach
-                </div>
+                    </div>
+                @endforeach
             </div>
-        @else
-            <p class="text-center fs-4">No post found.</p>
-        @endif
-
-        <div class="d-flex justify-content-end">
-            {{ $posts->links() }}
         </div>
+    @else
+        <p class="text-center fs-4">No post found.</p>
+    @endif
 
-    @endsection
+    <div class="d-flex justify-content-end">
+        {{ $posts->links() }}
+    </div>
+</div>
+@endsection

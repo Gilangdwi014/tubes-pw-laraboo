@@ -18,7 +18,7 @@ class DashboardPostController extends Controller
      */
     public function index()
     {
-        return view('dashboard.index', [
+        return view('dashboard.posts.index', [
             'posts' => Post::latest()->where('user_id', auth()->user()->id)->paginate(6)->withQueryString(),
             "active" => "home"
         ]);
@@ -62,7 +62,7 @@ class DashboardPostController extends Controller
 
         Post::create($ValidatedData);
 
-        return redirect('/dashboard')->with('success', 'New post has been added!');
+        return redirect('/dashboard/posts')->with('success', 'New post has been added!');
     }
 
     /**
@@ -88,6 +88,7 @@ class DashboardPostController extends Controller
     public function edit(Post $post)
     {
         return view('dashboard.posts.edit', [
+            "active" => "home",
             'post' => $post,
             'categories' => Category::all()
         ]);
@@ -129,7 +130,7 @@ class DashboardPostController extends Controller
         Post::where('id', $post->id)
             ->update($ValidatedData);
 
-        return redirect('/dashboard')->with('success', 'Post has been updated!');
+        return redirect('/dashboard/posts')->with('success', 'Post has been updated!');
     }
 
     /**
@@ -140,14 +141,13 @@ class DashboardPostController extends Controller
      */
     public function destroy(Post $post)
     {
-        dd($post->id);
         if ($post->image) {
             Storage::delete($post->image);
         }
 
         Post::destroy($post->id);
 
-        return redirect('/dashboard')->with('success', 'Post has been deleted!');
+        return redirect('/dashboard/posts')->with('success', 'Post has been deleted!');
     }
 
     public function checkSlug(Request $request)
