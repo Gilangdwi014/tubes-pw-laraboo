@@ -105,7 +105,7 @@
                                                     <span
                                                         class="card-link text-decoration-none border-0 bg-white text-primary">
                                                         <i class="bi bi-bookmark-plus"></i>
-                                                        Bookmarked
+                                                        Terbookmark
                                                     </span>
                                                 </div>
                                             @endif
