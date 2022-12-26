@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg" style="background: #D0F0C0">
     <div class="container">
-        <a class="navbar-brand" href="/"><img src="img/logo2.png" width="40" alt="">CookingMaster</a>
+        <a class="navbar-brand" href="/"><img src="../../../img/logo2.png" width="40" alt="">CookingMaster</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -15,7 +15,9 @@
                     <a class="nav-link {{ $active === 'categories' ? 'active' : '' }} loginHover"
                         href="/categories">Category</a>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item">
+                    <a class="nav-link {{ $active === 'about' ? 'active' : '' }} loginHover"
+                        href="/about">About</a>
                 </li>
             </ul>
             <ul class="navbar-nav mb-2 me-5 mb-lg-0">
