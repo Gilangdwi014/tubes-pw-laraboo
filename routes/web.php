@@ -43,3 +43,10 @@ Route::post('/register', [RegisterController::class, 'store']);
 
 Route::get('/dashboard/posts/checkSlug', [DashboardPostController::class, 'checkSlug'])->middleware('admin');
 Route::resource('/dashboard/posts', DashboardPostController::class)->middleware('admin');
+
+Route::get('/about', function () {
+    return view('about', [
+        'title' => 'about',
+        'active' => 'about',
+    ]);
+});

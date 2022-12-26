@@ -22,7 +22,7 @@
 
         <div class="card mb-3 px-0">
             <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel"
-                data-bs-interval="1000">
+                data-bs-interval="10000">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
                         aria-current="true" aria-label="Slide 1"></button>
