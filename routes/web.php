@@ -50,3 +50,5 @@ Route::get('/about', function () {
         'active' => 'about',
     ]);
 });
+
+Route::post('/menu/{post:slug}', [PostController::class, 'insertFeedback'])->middleware('auth');
