@@ -99,43 +99,36 @@
                                     </p>
                                     <div class="d-flex justify-content-between">
                                         <a href="/menu/{{ $post->slug }}" class="btn btn-primary">Read more</a>
-                                        @foreach ($likes as $like)
-                                            @if ($post->id === $like->post_id && $like->user_id === Auth::id())
-                                                <div class="bookmarked">
-                                                    <span
-                                                        class="card-link text-decoration-none border-0 bg-white text-primary">
-                                                        <i class="bi bi-bookmark-plus"></i>
-                                                        Terbookmark
-                                                    </span>
-                                                </div>
-                                            @endif
-                                        @endforeach
-                                        @foreach ($likes as $like)
-                                            @if ($like->post_id !== $post->id)
-                                                <form action="/bookmark/{{ $post->slug }}" method="POST">
-                                                    @csrf
-                                                    <button
-                                                        class="card-link text-decoration-none border-0 bg-white text-primary">
-                                                        <i class="bi bi-bookmark-plus"></i>
-                                                        Bookmark
-                                                    </button>
-                                                </form>
-                                            @break
+                                        @if (DB::table('likes')->where('post_id', '=', $post->id)->where('user_id', '=', Auth::id())->first())
+                                            <div class="bookmarked">
+                                                <span class="card-link text-decoration-none border-0 bg-white">
+                                                    <i class="bi bi-bookmark-plus"></i>
+                                                    Dibookmark
+                                                </span>
+                                            </div>
+                                        @else
+                                            <form action="/bookmark/{{ $post->slug }}" method="POST">
+                                                @csrf
+                                                <button
+                                                    class="card-link text-decoration-none border-0 bg-white text-primary">
+                                                    <i class="bi bi-bookmark-plus"></i>
+                                                    Bookmark
+                                                </button>
+                                            </form>
                                         @endif
-                                    @endforeach
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                @endforeach
+                    @endforeach
+                </div>
             </div>
-        </div>
-    @else
-        <p class="text-center fs-4">No post found.</p>
-    @endif
+        @else
+            <p class="text-center fs-4">No post found.</p>
+        @endif
 
-    <div class="d-flex justify-content-end">
-        {{ $posts->links() }}
+        <div class="d-flex justify-content-end">
+            {{ $posts->links() }}
+        </div>
     </div>
-</div>
 @endsection
