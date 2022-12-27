@@ -59,4 +59,9 @@ class Post extends Model
             ]
         ];
     }
+
+    public function feedback()
+    {
+        return $this->hasMany(Feedback::class);
+    }
 }
