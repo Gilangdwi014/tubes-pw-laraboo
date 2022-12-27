@@ -35,22 +35,22 @@
                     <div class="carousel-item active">
                         <img src="https://source.unsplash.com/1000x400?food" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5>First slide label</h5>
-                            <p>Some representative placeholder content for the first slide.</p>
+                            <h5 class="warnaText">Makanan Utama</h5>
+                            <p class="warnaText">Makanan utama yang populer.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img src="https://source.unsplash.com/1000x400?dessert" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5>Second slide label</h5>
-                            <p>Some representative placeholder content for the second slide.</p>
+                            <h5 class="warnaText">Minuman</h5>
+                            <p class="warnaText">minuman yang populer.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img src="https://source.unsplash.com/1000x400?beverage" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5>Third slide label</h5>
-                            <p>Some representative placeholder content for the third slide.</p>
+                            <h5 class="warnaText">Makanan Penutup</h5>
+                            <p class="warnaText">Makanan penutup yang populer</p>
                         </div>
                     </div>
                 </div>

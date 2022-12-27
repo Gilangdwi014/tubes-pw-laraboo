@@ -31,7 +31,7 @@
                             @can('admin')
                                 <li>
                                     <a class="dropdown-item" href="/dashboard/posts">
-                                        <i class="bi bi-layout-text-sidebar-reverse"></i> Beranda
+                                        <i class="bi bi-person"></i> Akun
                                     </a>
                                 </li>
                                 <li>
