@@ -4,7 +4,7 @@
     <div class="card-body">
         <div class="row">
             <div class="col-lg-3 position-relative">
-                <img src="https://source.unsplash.com/421x421?nature" width="200" class="img-tumbnail rounded-circle position-relative top-50 start-50 translate-middle" alt="">
+            <img src="{{ asset('storage/' . auth()->user()->foto) }}" class="gambarProfile img-tumbnail rounded-circle position-relative top-50 start-50 translate-middle" alt="{{ auth()->user()->username }}">
             </div>
 
             <div class="col-lg-4 pt-5">
@@ -13,8 +13,14 @@
             </div>
 
             <div class="col-lg-5 d-flex flex-row-reverse">
-                <a href="/dashboard/posts/create" class="btn btn-primary mt-auto"><i class="bi bi-plus"></i> Tambah
-                    Resep</a>
+                <div class="dropstart">
+                    <a href="" class="buttonDots mb-auto" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="/dashboard/profile/{{ auth()->user()->username }}/edit">Edit Profile</a></li>
+                        @can('admin')<li><a class="dropdown-item" href="/dashboard/posts/create">Tambah Resep</a></li>@endcan
+                    </ul>
+                </div>
+                {{-- <a href="/dashboard/posts/create" class="btn btn-primary mb-auto"><i class="bi bi-plus"></i> Tambah Resep</a> --}}
             </div>
         </div>
     </div>
