@@ -3,8 +3,8 @@
     <center><h1><img src="img/logo2.png" width="100" alt="">Cooking Master</h1></center>
     <center><p>Website Cooking Master merupakan website yang menyediakan berbagai macam resep masakan, 
         mulai dari menu utama, minuman sampai ke hidangan penutup/dessert, 
-        Pengguna bisa melihat berbagai macam resep, cara pembuatan, hingga feedback pengguna lain, 
-        apabila pengguna ingin melihat resep yang ingin dia lakukan bisa menggunakan fitur bookmark</p></center>
+        Pengguna bisa melihat berbagai macam resep, cara pembuatan, hingga feedback pengguna lain. 
+        Fitur bookmark akan memudahkan anda dalam menyimpan resep masakan, sehingga anda akan lebih mudah dalam memasak.</p></center>
         <br>
         <center><img src="img/logoLaraboo.png" alt=""></center>
         <br>
