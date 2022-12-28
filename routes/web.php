@@ -52,3 +52,5 @@ Route::get('/about', function () {
 });
 
 Route::post('/menu/{post:slug}', [PostController::class, 'insertFeedback'])->middleware('auth');
+Route::get('/dashboard/profile/{user:username}/edit', [DashboardPostController::class, 'profile']);
+Route::put('/dashboard/profile/{user:username}', [DashboardPostController::class, 'updateProfile']);

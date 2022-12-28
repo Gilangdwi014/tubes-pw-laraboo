@@ -59,7 +59,6 @@
     <br><br><br><br><br><br>
     <div class="col-lg-8">
         <h5>Kolom Feedback</h5>
-        {{-- table komentar di database --}}
         <form action="" method="post">
             @csrf
             <input type="hidden" name="post_id" value="{{ $post->id }}">
@@ -72,7 +71,7 @@
         </form>
         <br>
         <div class="col-lg-8">
-            @foreach ($post->feedback as $feedback)
+            @foreach ($post->feedback()->orderBy('created_at', 'desc')->get() as $feedback)
             <h5>{{ $feedback->user->name }}</h5>
             <small class="text-muted">{{ $feedback->created_at->diffForHumans() }}</small>
             {!! $feedback->feedback_isi !!}

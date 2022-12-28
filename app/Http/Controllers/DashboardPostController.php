@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use App\Models\Category;
+use App\Models\User;
 use Illuminate\Http\Request;
 use \Cviebrock\EloquentSluggable\Services\SlugService;
 use Illuminate\Support\Str;
@@ -154,5 +155,36 @@ class DashboardPostController extends Controller
     {
         $slug = SlugService::createSlug(Post::class, 'slug', $request->nama_masakan);
         return response()->json(['slug' => $slug]);
+    }
+    public function profile(User $user)
+    {
+        return view('dashboard.posts.profile', [
+            "active" => "home",
+            'user' => $user
+        ]);
+    }
+
+    public function updateProfile(Request $request, User $user)
+    {
+        $rules = [
+            'name' => 'required|max:255',
+            'foto' => 'image|file|max:1024',
+        ];
+
+        $ValidatedData = $request->validate($rules);
+
+        if ($request->file('foto')) {
+            if ($request->oldImage) {
+                Storage::delete($request->oldImage);
+            }
+            $ValidatedData['foto'] = $request->file('foto')->store('post-images');
+        }
+
+        $ValidatedData['id'] = auth()->user()->id;
+
+        User::where('id', $user->id)
+            ->update($ValidatedData);
+
+        return redirect('/dashboard/posts')->with('success', 'Post has been updated!');
     }
 }

@@ -35,10 +35,28 @@ body{
   object-fit: cover;
 }
 
+.gambarProfile{
+  width: 200px;
+  max-height: 200px;
+  object-fit: cover;
+}
+
 .warnaText{
   color: white;
   font-weight: bold;
   text-shadow: 2px 2px 2px #000000;
+}
+
+.buttonDots{
+  padding: 0.375rem 0.75rem;
+  border-radius: 5px;
+  color: grey;
+}
+
+.buttonDots:hover{
+  background-color: #acafaf;
+  padding: 0.375rem 0.75rem;
+  color: grey;
 }
 
 @media screen and (max-width: 990px) {
