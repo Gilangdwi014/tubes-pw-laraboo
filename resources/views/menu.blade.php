@@ -35,22 +35,22 @@
                     <div class="carousel-item active">
                         <img src="https://source.unsplash.com/1000x400?food" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5 class="warnaText">Makanan Utama</h5>
-                            <p class="warnaText">Makanan utama yang populer.</p>
+                            <h2 class="warnaText">Makanan Utama</h1>
+                            <p class="warnaText fs-3">Makanan utama yang populer.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img src="https://source.unsplash.com/1000x400?dessert" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5 class="warnaText">Minuman</h5>
-                            <p class="warnaText">minuman yang populer.</p>
+                            <h2 class="warnaText">Minuman</h1>
+                            <p class="warnaText fs-3">minuman yang populer.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img src="https://source.unsplash.com/1000x400?beverage" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5 class="warnaText">Makanan Penutup</h5>
-                            <p class="warnaText">Makanan penutup yang populer</p>
+                            <h2 class="warnaText">Makanan Penutup</h1>
+                            <p class="warnaText fs-3">Makanan penutup yang populer</p>
                         </div>
                     </div>
                 </div>
