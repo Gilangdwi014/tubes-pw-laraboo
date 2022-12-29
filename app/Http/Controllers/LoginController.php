@@ -22,7 +22,10 @@ class LoginController extends Controller
             'password' => 'required'
         ]);
 
-        if (Auth::attempt($credentials)) {
+        if (Auth::attempt($credentials) && auth()->user()->is_admin === 1) {
+            $request->session()->regenerate();
+            return redirect()->intended('/dashboard/posts');
+        } else if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
             return redirect()->intended('/');
         }
