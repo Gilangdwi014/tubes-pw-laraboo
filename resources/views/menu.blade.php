@@ -33,24 +33,27 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="https://source.unsplash.com/1000x400?food" class="d-block w-100" alt="...">
+                        <img src="https://www.themealdb.com/images/media/meals/1529444113.jpg"
+                            class="d-block w-100 gambarCarousel" alt="...">
                         <div class="carousel-caption d-none d-md-block">
                             <h2 class="warnaText">Makanan Utama</h1>
-                            <p class="warnaText fs-3">Makanan utama yang populer.</p>
+                                <p class="warnaText fs-3">Makanan utama yang populer.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="https://source.unsplash.com/1000x400?dessert" class="d-block w-100" alt="...">
+                        <img src="https://source.unsplash.com/1000x400?beverage" class="d-block w-100 gambarCarousel"
+                            alt="...">
                         <div class="carousel-caption d-none d-md-block">
                             <h2 class="warnaText">Minuman</h1>
-                            <p class="warnaText fs-3">minuman yang populer.</p>
+                                <p class="warnaText fs-3">minuman yang populer.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="https://source.unsplash.com/1000x400?beverage" class="d-block w-100" alt="...">
+                        <img src="https://www.themealdb.com/images/media/meals/xqrwyr1511133646.jpg"
+                            class="d-block w-100 gambarCarousel" alt="...">
                         <div class="carousel-caption d-none d-md-block">
                             <h2 class="warnaText">Makanan Penutup</h1>
-                            <p class="warnaText fs-3">Makanan penutup yang populer</p>
+                                <p class="warnaText fs-3">Makanan penutup yang populer</p>
                         </div>
                     </div>
                 </div>
