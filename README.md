@@ -31,9 +31,9 @@ Website Cooking master terdapat 3 user diantaranya:
 |Feedback| ❌ | ✅ | ✅|
 
 #### Terimakasih Kepada
-> Sandika Galih Amalga ST. MT 
-> Aditya Fataha Dwijaya
-> Sahid Jafar
-> Asep Moh. Aripin
+- Sandika Galih Amalga ST. MT 
+- Aditya Fataha Dwijaya
+- Sahid Jafar
+- Asep Moh. Aripin
 #### Licences
 © 2023 Laraboo Team. All rights reserved.
