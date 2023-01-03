@@ -52,5 +52,7 @@ Route::get('/about', function () {
 });
 
 Route::post('/menu/{post:slug}', [PostController::class, 'insertFeedback'])->middleware('auth');
+Route::delete('/menu/{feedback:id}', [PostController::class, 'deleteFeedback']);
+
 Route::get('/dashboard/profile/{user:username}/edit', [DashboardPostController::class, 'profile']);
 Route::put('/dashboard/profile/{user:username}', [DashboardPostController::class, 'updateProfile']);
