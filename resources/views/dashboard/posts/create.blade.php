@@ -26,7 +26,7 @@
                     </select>
                 </div>
                 <div class="mb-3">
-                    <label for="nama_masakan" class="form-label">Nama_masakan</label>
+                    <label for="nama_masakan" class="form-label">Nama Masakan</label>
                     <input type="text" class="form-control @error('nama_masakan') is-invalid @enderror" id="nama_masakan"
                         name="nama_masakan" required autofocus value="{{ old('nama_masakan') }}">
                     @error('nama_masakan')
@@ -46,7 +46,7 @@
                     @enderror
                 </div>
                 <div class="mb-3">
-                    <label for="image" class="form-label">Post Image</label>
+                    <label for="image" class="form-label">Unggah Gambar</label>
                     <input class="form-control @error('image') is-invalid @enderror" type="file" id="image"
                         name="image" onchange="previewImage()">
                     @error('image')
@@ -56,7 +56,7 @@
                     @enderror
                 </div>
                 <div class="mb-3">
-                    <label for="bahan_makanan" class="form-label">Bahan Bahan</label>
+                    <label for="bahan_makanan" class="form-label">Bahan-bahan</label>
                     @error('bahan_makanan')
                         <p class="text-danger">{{ $message }}</p>
                     @enderror

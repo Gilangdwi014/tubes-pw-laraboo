@@ -21,7 +21,7 @@
       </ul>
       <hr style="color: rgb(0, 0, 0); margin-top:15px;">
       <p class="text-center text-black m-auto pb-3">
-        Copyright &copy;
+        &copy;
         <script>
             document.write(new Date().getFullYear());
         </script> Cooking Master Developed By Laraboo Team Inc

@@ -93,7 +93,7 @@
                                 @csrf
                                 @method('delete')
                                 <button class="dropdown-item">
-                                    Delete
+                                    Hapus
                                 </button>
                         </li>
                     </ul>
