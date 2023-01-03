@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg" style="background: #D0F0C0">
+<nav class="navbar navbar-expand-lg fixed-top shadow" style="background: #D0F0C0">
     <div class="container">
         <a class="navbar-brand" href="/"><img src="../../../img/logo2.png" width="40" alt="">CookingMaster</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"

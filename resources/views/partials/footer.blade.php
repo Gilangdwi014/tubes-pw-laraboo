@@ -1,4 +1,4 @@
-{{-- <div style="background-color: #D0F0C0">
+<div style="background-color: #D0F0C0">
   <div class="container">
     <footer>
       <p class="text-start pt-2" style="color: rgb(0, 0, 0)">Kontak & ikuti kami:</p>
@@ -28,9 +28,9 @@
     </p>
     </footer>
   </div>
-</div> --}}
+</div>
 
-<div class="container">
+{{-- <div class="container">
   <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
     <div class="col-md-5 d-flex align-items-center">
       <span class="mb-3 mb-md-0" style="color: #82bd65">&copy;
@@ -45,7 +45,7 @@
         <li class="ms-3"><a class="text-muted" href="mailto:larabooteam@gmail.com"><h2><i class="bi bi-envelope" style="color: #82bd65"></i></h2></a></li>
     </ul>
   </footer>
-</div>
+</div> --}}
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>

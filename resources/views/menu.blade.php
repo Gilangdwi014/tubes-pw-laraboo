@@ -2,7 +2,7 @@
 
 @extends('layouts.main')
 @section('container')
-    <div class="row justify-content-center mb-3">
+    <div class="row justify-content-center mb-3" style="padding-top:70px">
 
         <div class="col-md-6">
             <form action="/">

@@ -146,9 +146,7 @@ class DashboardPostController extends Controller
             Storage::delete($post->image);
         }
 
-        // Post::destroy($post->id);
-        $post = Post::all();
-        dd($post);
+        Post::destroy($post->id);
 
         return redirect('/dashboard/posts')->with('success', 'Post has been deleted!');
     }

@@ -47,6 +47,8 @@
 </div>
     @else
     <p class="text-center fs-4">No post found.</p>
+    <div style="padding-bottom: 317px"></div>
+</div>
     @endif
 
     {{-- <div class="d-flex justify-content-end">
