@@ -35,6 +35,7 @@ class PostController extends Controller
     public function show(Post $post)
     {
         $feedback = Feedback::all();
+        // dd($post);
         return view('detmenu', [
             "title" => "Single Post",
             "active" => "home",
@@ -48,6 +49,11 @@ class PostController extends Controller
         $request->request->add(['user_id' => auth()->user()->id]);
         $feedback = Feedback::create($request->all());
         return redirect()->back()->with('success', 'add comment');
-        // dd($request->all());
+    }
+
+    public function deleteFeedback(Feedback $feedback)
+    {
+        $feedback = Feedback::destroy($feedback->id);
+        return redirect()->back()->with('success', 'delete comment');
     }
 }

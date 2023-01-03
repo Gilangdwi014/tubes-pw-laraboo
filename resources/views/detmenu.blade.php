@@ -69,14 +69,38 @@
                 <button type="submit" class="btn btn-primary">Submit</button>
             </div>
         </form>
-        <br>
-        <div class="col-lg-8">
-            @foreach ($post->feedback()->orderBy('created_at', 'desc')->get() as $feedback)
-            <h5>{{ $feedback->user->name }}</h5>
-            <small class="text-muted">{{ $feedback->created_at->diffForHumans() }}</small>
-            {!! $feedback->feedback_isi !!}
-            <br>
-            @endforeach
-        </div>
     </div>
+    <br>
+    <div class="row">
+        @foreach ($post->feedback()->orderBy('created_at', 'desc')->get() as $feedback)
+            @if (auth()->user()->id == $feedback->user->id)
+            <div class="col-lg-5">
+            @else
+            <div class="col-lg-8">
+            @endif
+                <h5>{{ $feedback->user->name }}</h5>
+                <small class="text-muted">{{ $feedback->created_at->diffForHumans() }}</small>
+                {!! $feedback->feedback_isi !!}
+                <br>
+            </div>
+            @if (auth()->user()->id == $feedback->user->id)
+                <div class="col-lg-4 d-flex flex-row-reverse">
+                <div class="dropstart">
+                    <a href="" class="buttonDots pt-auto" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <form action="/menu/{{ $feedback->id }}" method="POST" class="d-inline">
+                                @csrf
+                                @method('delete')
+                                <button class="dropdown-item">
+                                    Delete
+                                </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            @endif
+        @endforeach
+    </div>
+    
 @endsection
