@@ -1,6 +1,6 @@
 # *Laraboo Team*
 -----
-#### Anggota
+#### Anggota Laraboo Team
 - Gilang Dwi Adira Karsoma (Project Manager)
 - Dean Tirta Santika (Backend Developer)
 - Sulis Rosliani (Frontend Developer)
