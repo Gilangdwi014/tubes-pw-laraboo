@@ -19,7 +19,7 @@
   </head>
   <body>
     @include('partials.navbar')
-    <div class="container mt-4">
+    <div class="container mt-4" style="padding-top:70px">
       @yield('container')
     </div>
     @include('partials.footer')
