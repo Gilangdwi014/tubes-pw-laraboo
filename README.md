@@ -1,6 +1,6 @@
 # *Laraboo Team*
 -----
-#### Anggota / Team Uchiha
+#### Anggota
 - Gilang Dwi Adira Karsoma (Project Manager)
 - Dean Tirta Santika (Backend Developer)
 - Sulis Rosliani (Frontend Developer)
