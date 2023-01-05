@@ -32,7 +32,7 @@
                         aria-label="Slide 3"></button>
                 </div>
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
+                    <div class="carousel-item active" data-bs-interval="10000">
                         <img src="https://www.themealdb.com/images/media/meals/1529444113.jpg"
                             class="d-block w-100 gambarCarousel" alt="...">
                         <div class="carousel-caption d-none d-md-block">
@@ -40,7 +40,7 @@
                                 <p class="warnaText fs-3">Makanan utama yang populer.</p>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item" data-bs-interval="10000">
                         <img src="https://source.unsplash.com/1000x400?beverage" class="d-block w-100 gambarCarousel"
                             alt="...">
                         <div class="carousel-caption d-none d-md-block">
@@ -48,7 +48,7 @@
                                 <p class="warnaText fs-3">minuman yang populer.</p>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item" data-bs-interval="10000">
                         <img src="https://www.themealdb.com/images/media/meals/xqrwyr1511133646.jpg"
                             class="d-block w-100 gambarCarousel" alt="...">
                         <div class="carousel-caption d-none d-md-block">

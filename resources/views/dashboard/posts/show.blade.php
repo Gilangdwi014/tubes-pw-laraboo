@@ -27,7 +27,7 @@
     <div class="row">
         <div class="col-lg-6">
             @if ($post->image)
-                <div style="max-height: 350px; overflow: hidden">
+                <div style="max-height: 350px; overflow: hidden" class="mb-5">
                     <img src="{{ asset('storage/' . $post->image) }}" alt="{{ $post->category->name }}" class="img-fluid">
                 </div>
             @else
